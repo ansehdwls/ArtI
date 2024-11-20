@@ -1,5 +1,5 @@
 #  🎨 Arti - 추천을 통한 나만의 미술관 🎨
-<img width="350" alt="image" src="/uploads/d38d43c1c034b140a5fe333b4ec41c19/Arti_로고.png">
+<img width="350" alt="image" src="/images/Arti_로고.png">
 <br>
 Arti 서버 링크: https://j11d106.p.ssafy.io/ 
 
@@ -60,7 +60,7 @@ Arti 앱 다운로드 링크: https://drive.google.com/file/d/1q8peKZ60zqSLBoF9x
 ## 주요 기술 및 개발 환경
 
 ### 아키텍처 구성도
-![Web App Reference Architecture (9)](/uploads/6e615bdc557699487fbcc2b43214a6ed/아키텍쳐.png)
+![Web App Reference Architecture (9)](./images/아키텍쳐.png)
 
 ### **Android**
 
