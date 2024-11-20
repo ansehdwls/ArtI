@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/sign_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background"
+        tools:context=".ui.signup.SignUpFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_cover_color">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:elevation="2dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/sign_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:elevation="2dp"
+                android:src="@drawable/ic_left_24"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:tint="@color/white" />
+
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.02" />
+
+
+                    <TextView
+                        android:id="@+id/sign_email_tv"
+                        style="@style/LoginTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이메일"
+                        app:layout_constraintBottom_toTopOf="@id/sign_email_et"
+                        app:layout_constraintStart_toStartOf="@+id/sign_email_et"
+                        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+                    <EditText
+                        android:id="@+id/sign_email_et"
+                        style="@style/LoginEditInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="28"
+                        app:layout_constraintBottom_toTopOf="@id/sign_certification_tv"
+                        app:layout_constraintEnd_toStartOf="@+id/sign_email_btn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_email_tv" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sign_email_btn"
+                        style="@style/ButtonRoundShort8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전송"
+                        android:background="@drawable/background_point_trans_button_round8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/sign_email_et" />
+
+                    <TextView
+                        android:id="@+id/sign_certification_tv"
+                        style="@style/LoginTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인증번호"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/sign_certification_et"
+                        app:layout_constraintStart_toStartOf="@+id/sign_certification_et"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_email_et" />
+
+                    <EditText
+                        android:id="@+id/sign_certification_et"
+                        style="@style/LoginEditInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_login_edit_text"
+                        android:visibility="gone"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:inputType="number"
+                        app:layout_constraintBottom_toTopOf="@id/sign_nick_tv"
+                        app:layout_constraintEnd_toStartOf="@+id/sign_certification_btn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_certification_tv" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sign_certification_btn"
+                        style="@style/ButtonRoundShort8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인증"
+                        android:background="@drawable/background_point_trans_button_round8"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/sign_certification_et" />
+
+                    <TextView
+                        android:id="@+id/sign_code_des_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인증번호가 발송되었습니다."
+                        android:textColor="@color/white"
+                        android:visibility="invisible"
+                        app:layout_constraintStart_toStartOf="@+id/sign_certification_et"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_certification_et" />
+
+                    <TextView
+                        android:id="@+id/sign_nick_tv"
+                        style="@style/LoginTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="닉네임"
+                        app:layout_constraintBottom_toTopOf="@id/sign_nick_et"
+                        app:layout_constraintStart_toStartOf="@+id/sign_nick_et"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_certification_et" />
+
+                    <EditText
+                        android:id="@+id/sign_nick_et"
+                        style="@style/LoginEditInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        app:layout_constraintBottom_toTopOf="@id/sign_pw_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_nick_tv" />
+
+                    <TextView
+                        android:id="@+id/sign_pw_tv"
+                        style="@style/LoginTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호"
+                        app:layout_constraintBottom_toTopOf="@id/sign_pw_et"
+                        app:layout_constraintStart_toStartOf="@+id/sign_pw_et"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_nick_et" />
+
+                    <EditText
+                        android:id="@+id/sign_pw_et"
+                        style="@style/LoginEditInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        app:layout_constraintBottom_toTopOf="@id/sign_pw_verify_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_pw_tv" />
+
+                    <TextView
+                        android:id="@+id/sign_pw_verify_tv"
+                        style="@style/LoginTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호 확인"
+                        app:layout_constraintBottom_toTopOf="@id/sign_pw_verify_et"
+                        app:layout_constraintStart_toStartOf="@+id/sign_pw_verify_et"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_pw_et" />
+
+                    <EditText
+                        android:id="@+id/sign_pw_verify_et"
+                        style="@style/LoginEditInput"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        app:layout_constraintBottom_toTopOf="@id/sign_cancel_btn"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_pw_verify_tv" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sign_cancel_btn"
+                        style="@style/ButtonRoundShort8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/background_point_trans_button_round8"
+                        android:text="취소"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/sign_btn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/sign_pw_verify_et" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sign_btn"
+                        style="@style/ButtonRoundShort8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="가입"
+                        android:background="@drawable/background_point_trans_button_round8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sign_cancel_btn"
+                        app:layout_constraintTop_toTopOf="@+id/sign_cancel_btn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

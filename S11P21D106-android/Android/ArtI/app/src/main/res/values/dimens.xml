@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="button_round8">8dp</dimen>
+    <dimen name="button_round20">20dp</dimen>
+
+    <dimen name="button_padding12">12dp</dimen>
+
+</resources>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_detail_modify_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:context=".ui.profile.ProfileDetailFragment">
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/profile_detail_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="프로필 편집"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/profile_detail_nick_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="닉네임"
+                app:layout_constraintStart_toStartOf="@+id/profile_detail_nick_et"
+                app:layout_constraintTop_toBottomOf="@+id/profile_detail_title_tv" />
+
+            <EditText
+                android:id="@+id/profile_detail_nick_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/shape_profile_modify_edit_text"
+                android:text="황병현"
+                android:layout_marginTop="15dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_detail_nick_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/ButtonRoundShort8"
+                android:id="@+id/profile_detail_cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:minHeight="0dp"
+                android:paddingVertical="10dp"
+                android:layout_margin="30dp"
+                app:layout_constraintEnd_toStartOf="@id/profile_detail_modify_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_detail_nick_et" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/ButtonRoundShort8"
+                android:id="@+id/profile_detail_modify_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:minHeight="0dp"
+                android:paddingVertical="10dp"
+                android:text="수정"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_detail_cancel_btn"
+                app:layout_constraintTop_toBottomOf="@+id/profile_detail_nick_et" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_pass_modify_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:context=".ui.profile.ProfileDetailFragment">
+
+            <TextView
+                android:id="@+id/profile_pass_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="비밀번호 수정"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profile_pass_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_left_24"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_pass_title_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profile_pass_title_tv" />
+
+
+            <TextView
+                android:id="@+id/profile_pass_old_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="기존 비밀번호"
+                app:layout_constraintStart_toStartOf="@+id/profile_pass_old_et"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_title_tv" />
+
+            <EditText
+                android:id="@+id/profile_pass_old_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/shape_profile_modify_edit_text"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_old_tv" />
+
+            <TextView
+                android:id="@+id/profile_pass_new_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="새 비밀번호"
+                app:layout_constraintStart_toStartOf="@+id/profile_pass_new_et"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_old_et" />
+
+            <EditText
+                android:id="@+id/profile_pass_new_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/shape_profile_modify_edit_text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_new_tv" />
+
+            <TextView
+                android:id="@+id/profile_pass_new_check_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="새 비밀번호 재입력"
+                app:layout_constraintStart_toStartOf="@+id/profile_pass_new_check_et"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_new_et" />
+
+            <EditText
+                android:id="@+id/profile_pass_new_check_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/shape_profile_modify_edit_text"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_new_check_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profile_pass_cancel_btn"
+                style="@style/ButtonRoundShort8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:minHeight="0dp"
+                android:paddingVertical="10dp"
+                android:text="취소"
+                app:layout_constraintEnd_toStartOf="@id/profile_pass_modify_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_new_check_et" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/profile_pass_modify_btn"
+                style="@style/ButtonRoundShort8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:minHeight="0dp"
+                android:paddingVertical="10dp"
+                android:text="수정"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profile_pass_cancel_btn"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pass_new_check_et" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_info_cl"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/profile_info_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="이용 약관"
+                android:layout_marginTop="50dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/profile_info_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_left_24"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_info_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profile_info_tv" />
+            <ScrollView
+                android:id="@+id/profile_detail_info_sv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_info_tv">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="@string/info"/>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_total"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_cover_color"
+            tools:context=".ui.login.LoginFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"
+                app:layout_constraintVertical_bias="0.7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/login_logo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:src="@drawable/ic_logo_white"
+                app:layout_constraintBottom_toTopOf="@+id/vertical_guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/login_id_tv"
+                style="@style/LoginTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="아이디"
+                app:layout_constraintBottom_toTopOf="@id/login_id_et"
+                app:layout_constraintStart_toStartOf="@+id/login_id_et"
+                app:layout_constraintTop_toBottomOf="@+id/login_logo_iv" />
+
+            <EditText
+                style="@style/LoginEditInput"
+                android:id="@+id/login_id_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="28"
+                android:background="@drawable/shape_login_edit_text"
+                app:layout_constraintBottom_toTopOf="@id/login_pw_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_id_tv" />
+
+            <TextView
+                android:id="@+id/login_pw_tv"
+                style="@style/LoginTextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="비밀번호"
+                app:layout_constraintBottom_toTopOf="@id/login_pw_et"
+                app:layout_constraintStart_toStartOf="@+id/login_pw_et"
+                app:layout_constraintTop_toBottomOf="@+id/login_id_et" />
+
+            <EditText
+                style="@style/LoginEditInput"
+                android:id="@+id/login_pw_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:singleLine="true"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:background="@drawable/shape_login_edit_text"
+                app:layout_constraintBottom_toTopOf="@id/login_btn_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_pw_tv" />
+
+            <LinearLayout
+                android:id="@+id/login_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:paddingVertical="10dp"
+                android:clickable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_pw_et">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login_btn"
+                    style="@style/ButtonRoundShort8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_point_trans_button_round8"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="로그인" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sign_btn"
+                    style="@style/ButtonRoundShort8"
+                    android:background="@drawable/background_point_trans_button_round8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="회원가입" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

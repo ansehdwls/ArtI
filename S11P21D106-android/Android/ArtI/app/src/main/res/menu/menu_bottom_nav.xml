@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_unselected_home_24"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_unselected_search_24"
+        android:title="@string/menu_search" />
+
+    <item
+        android:id="@+id/artworkUploadFragment"
+        android:title="" />
+
+    <item
+        android:id="@+id/myGalleryHomeFragment"
+        android:icon="@drawable/ic_unselected_museum"
+        android:title="@string/menu_art_museum" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_unselected_profile"
+        android:title="@string/menu_profile" />
+
+
+</menu>

@@ -1,0 +1,113 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ArtI" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/point_color</item>
+    </style>
+
+    <style name="ButtonTextWhiteBold" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ButtonRoundShort8" parent="ButtonTextWhiteBold">
+        <item name="android:background">@drawable/background_point_button_round8</item>
+        <item name="android:layout_width">130dp</item>
+    </style>
+
+    <style name="ButtonRoundLong8" parent="ButtonTextWhiteBold">
+        <item name="android:background">@drawable/background_point_button_round8</item>
+        <item name="android:layout_width">260dp</item>
+    </style>
+
+    <style name="ButtonRoundShort20" parent="ButtonTextWhiteBold">
+        <item name="android:background">@drawable/background_point_button_round20</item>
+        <item name="android:layout_width">130dp</item>
+    </style>
+
+    <style name="ButtonRoundLong20" parent="ButtonTextWhiteBold">
+        <item name="android:background">@drawable/background_point_button_round20</item>
+        <item name="android:layout_width">260dp</item>
+    </style>
+
+    <style name="CustomShapeFab" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="LoginEditInput" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/shape_login_edit_text</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="android:layout_margin">15dp</item>
+    </style>
+
+    <style name="LoginTextTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!-- Survey -->
+    <style name="SurveyImage" >
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- My ArtMuseum -->
+
+    <style name="SelectTextTitle" parent="TextAppearance.AppCompat">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="UnSelectTextTitle" parent="TextAppearance.AppCompat">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/disable_color</item>
+    </style>
+
+    <style name="MyGalleryTitleText" parent="TextAppearance.AppCompat">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!-- 미술관 디테일 -->
+    <style name="GalleryDetailMenuText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 미술관 내부 디테일 -->
+    <style name="ArtGalleryRadioBtn" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <!-- 마이페이지 -->
+    <style name="MyPageIcon">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="MyPageMenuText" parent="TextAppearance.AppCompat">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <!-- 전체 화면 다이얼로그 스타일 -->
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="Theme.ArtI" parent="Base.Theme.ArtI" />
+</resources>

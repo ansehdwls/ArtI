@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hexa.arti.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_artGalleryDetailFragment"
+            app:destination="@id/artGalleryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.hexa.arti.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_artBannerFragment"
+            app:destination="@id/artBannerFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_searchFragment_to_artistBannerFragment"
+            app:destination="@id/artistBannerFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_searchFragment_to_genreBannerFragment"
+            app:destination="@id/genreBannerFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_searchFragment_to_artMuseumBannerFragment"
+            app:destination="@id/artMuseumBannerFragment"
+            app:enterAnim="@anim/slide_in_up"
+            app:popExitAnim="@anim/slide_out_down" />
+        <action
+            android:id="@+id/action_searchFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_artDetailFragment"
+            app:destination="@id/artDetailFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_artMuseumFragment"
+            app:destination="@id/artMuseumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artworkUploadFragment"
+        android:name="com.hexa.arti.ui.artwork.ArtworkUploadFragment"
+        android:label="fragment_artwork_upload"
+        tools:layout="@layout/fragment_artwork_upload">
+        <action
+            android:id="@+id/action_artworkUploadFragment_to_selectArtworkFragment"
+            app:destination="@id/selectArtworkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscribeFragment"
+        android:name="com.hexa.arti.ui.artmuseum.SubscribeFragment"
+        android:label="fragment_subscribe"
+        tools:layout="@layout/fragment_subscribe"/>
+    <fragment
+        android:id="@+id/portfolioFragment"
+        android:name="com.hexa.arti.ui.profile.PortfolioFragment"
+        android:label="fragment_portfolio"
+        tools:layout="@layout/fragment_portfolio" >
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.hexa.arti.ui.MainActivity"
+        android:label="MainActivity" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.hexa.arti.ui.LoginActivity"
+        android:label="LoginActivity" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.hexa.arti.ui.SplashActivity"
+        android:label="SplashActivity" />
+    <fragment
+        android:id="@+id/surveyFragment"
+        android:name="com.hexa.arti.ui.survey.SurveyFragment"
+        android:label="SurveyFragment">
+        <action
+            android:id="@+id/action_surveyFragment_to_createGalleryFragment"
+            app:destination="@id/createGalleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGalleryFragment"
+        android:name="com.hexa.arti.ui.artmuseum.MyGalleryFragment"
+        android:label="MyGalleryFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/artGalleryDetailFragment"
+        android:name="com.hexa.arti.ui.artGalleryDetail.ArtGalleryDetailFragment"
+        android:label="ArtGalleryDetailFragment">
+        <argument
+            android:name="galleryId"
+            android:defaultValue="1"
+            app:argType="integer">
+
+        </argument>
+        <argument
+            android:name="galleryName"
+            android:defaultValue="1"
+            app:argType="string">
+
+        </argument>
+        <action
+            android:id="@+id/action_artGalleryDetailFragment_to_artDetailFragment"
+            app:destination="@id/artDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artDetailFragment"
+        android:name="com.hexa.arti.ui.artGalleryDetail.ArtDetailFragment"
+        android:label="ArtDetailFragment">
+        <argument
+            android:name="imgId"
+            app:argType="integer" />
+        <argument
+            android:name="imgUrl"
+            app:argType="string" />
+        <argument
+            android:name="imgYear"
+            app:argType="string" />
+        <argument
+            android:name="imgArtist"
+            app:argType="string" />
+        <argument
+            android:name="imgTitle"
+            app:argType="string" />
+        <argument
+            android:name="galleryId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/artBannerFragment"
+        android:name="com.hexa.arti.ui.search.artwork.ArtBannerFragment"
+        android:label="ArtBannerFragment" >
+        <action
+            android:id="@+id/action_artBannerFragment_to_artDetailFragment"
+            app:destination="@id/artDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.hexa.arti.ui.profile.MyPageFragment"
+        android:label="MyPageFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.hexa.arti.ui.profile.ProfileDetailFragment"
+        android:label="ProfileDetailFragment">
+        <argument
+            android:name="detailType"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistBannerFragment"
+        android:name="com.hexa.arti.ui.search.artist.ArtistBannerFragment"
+        android:label="ArtistBannerFragment">
+        <action
+            android:id="@+id/action_artistBannerFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectArtworkFragment"
+        android:name="com.hexa.arti.ui.artwork.SelectArtworkFragment"
+        android:label="SelectArtworkFragment">
+        <action
+            android:id="@+id/action_selectArtworkFragment_to_isSelectCreateImageFragment"
+            app:destination="@id/isSelectCreateImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/isSelectCreateImageFragment"
+        android:name="com.hexa.arti.ui.artwork.IsSelectCreateImageFragment"
+        android:label="IsSelectCreateImageFragment">
+        <argument
+            android:name="artId"
+            android:defaultValue="1"
+            app:argType="integer">
+
+        </argument>
+        <action
+            android:id="@+id/action_isSelectCreateImageFragment_to_imageUploadFragment"
+            app:destination="@id/imageUploadFragment" />
+        <action
+            android:id="@+id/action_isSelectCreateImageFragment_to_artworkResultFragment"
+            app:destination="@id/artworkResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageUploadFragment"
+        android:name="com.hexa.arti.ui.artwork.ImageUploadFragment"
+        android:label="ImageUploadFragment">
+        <argument
+            android:name="artId"
+            android:defaultValue="1"
+            app:argType="integer">
+
+        </argument>
+        <action
+            android:id="@+id/action_imageUploadFragment_to_artworkResultFragment"
+            app:destination="@id/artworkResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artworkResultFragment"
+        android:name="com.hexa.arti.ui.artwork.ArtworkResultFragment"
+        android:label="ArtworkResultFragment">
+
+        <argument
+            android:name="artId"
+            android:defaultValue="1"
+            app:argType="string" />
+        <argument
+            android:name="artType"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <!-- popUpTo 설정 추가 -->
+        <action
+            android:id="@+id/action_artworkResultFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+        app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.hexa.arti.ui.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_profileDetailFragment"
+            app:destination="@id/profileDetailFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_instagramFragment"
+            app:destination="@id/instagramFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGalleryHomeFragment"
+        android:name="com.hexa.arti.ui.artmuseum.MyGalleryHomeFragment"
+        android:label="fragment_my_gallery_home"
+        tools:layout="@layout/fragment_my_gallery_home">
+        <argument
+            android:name="myGalleryType"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_myGalleryHomeFragment_to_artGalleryDetailFragment"
+            app:destination="@id/artGalleryDetailFragment" />
+        <action
+            android:id="@+id/action_myGalleryHomeFragment_to_artMuseumFragment"
+            app:destination="@id/artMuseumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreBannerFragment"
+        android:name="com.hexa.arti.ui.search.genre.GenreBannerFragment"
+        android:label="GenreBannerFragment">
+        <action
+            android:id="@+id/action_genreBannerFragment_to_genreDetailFragment"
+            app:destination="@id/genreDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artMuseumBannerFragment"
+        android:name="com.hexa.arti.ui.search.museum.ArtMuseumBannerFragment"
+        android:label="ArtMuseumBannerFragment">
+        <action
+            android:id="@+id/action_artMuseumBannerFragment_to_artMuseumFragment"
+            app:destination="@id/artMuseumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreDetailFragment"
+        android:name="com.hexa.arti.ui.search.genre.GenreDetailFragment"
+        android:label="GenreDetailFragment">
+
+        <argument
+            android:name="genreName"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_genreDetailFragment_to_artDetailFragment"
+            app:destination="@id/artDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/artMuseumFragment"
+        android:name="com.hexa.arti.ui.search.museum.ArtMuseumFragment"
+        android:label="ArtMuseumFragment">
+        <argument
+            android:name="gallery"
+            app:argType="com.hexa.arti.data.model.artmuseum.GalleryBanner"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_artMuseumFragment_to_artGalleryDetailFragment"
+            app:destination="@id/artGalleryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistDetailFragment"
+        android:name="com.hexa.arti.ui.search.artist.ArtistDetailFragment"
+        android:label="fragment_artist_detail"
+        tools:layout="@layout/fragment_artist_detail">
+
+        <argument
+            android:name="artist"
+            app:argType="com.hexa.arti.data.model.search.Artist"
+            app:nullable="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/createGalleryFragment"
+        android:name="com.hexa.arti.ui.survey.CreateGalleryFragment"
+        android:label="CreateGallertFragment" >
+        <argument
+            android:name="surveyList"
+            app:argType="integer[]"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_createGalleryFragment_to_instagramSurveyFragment"
+            app:destination="@id/instagramSurveyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/instagramFragment"
+        android:name="com.hexa.arti.ui.profile.InstagramFragment"
+        android:label="InstagramFragment" />
+    <fragment
+        android:id="@+id/instagramSurveyFragment"
+        android:name="com.hexa.arti.ui.survey.InstagramSurveyFragment"
+        android:label="InstagramSurveyFragment" >
+        <action
+            android:id="@+id/action_instagramSurveyFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_instagramSurveyFragment_to_instagramFragment"
+            app:destination="@id/instagramFragment"/>
+    </fragment>
+</navigation>

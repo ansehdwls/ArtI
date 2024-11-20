@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        tools:context=".ui.artmuseum.MyGalleryFragment">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_gallery_ct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_art_top_bar">
+
+                <EditText
+                    android:id="@+id/my_gallery_name_tv"
+                    style="@style/MyGalleryTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="병현이의 미술관"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:maxLength="16"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:enabled="false"
+                    app:layout_constraintEnd_toStartOf="@+id/my_gallery_play_btn"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@+id/my_gallery_ct"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_ct" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_name_modify_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_edit_24"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_name_tv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_name_check_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_done_24"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_name_tv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_name_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clear_24"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_name_check_btn"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_name_tv" />
+                <ImageView
+                    android:id="@+id/my_gallery_play_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/polygon_5"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_name_tv"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_name_tv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_info_check_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_done_24"
+                    android:visibility="gone"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_info_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_info_modify_btn"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_info_tv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_info_cancel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clear_24"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_info_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_info_check_btn"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_info_tv" />
+                <TextView
+                    android:id="@+id/my_gallery_thumbnail_tv"
+                    style="@style/MyGalleryTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="썸네일"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_name_tv" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/my_gallery_thumbnail_cv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_thumbnail_tv">
+
+                    <ImageView
+                        android:id="@+id/my_gallery_thumbnail_iv"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gallery_example" />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/my_gallery_info_tv"
+                    style="@style/MyGalleryTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="소개"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_thumbnail_cv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_info_modify_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_edit_24"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_info_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_info_tv"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_info_tv" />
+
+                <ImageView
+                    android:id="@+id/my_gallery_theme_add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_add_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/my_gallery_theme_tv"
+                    app:layout_constraintStart_toEndOf="@+id/my_gallery_theme_tv"
+                    app:layout_constraintTop_toTopOf="@+id/my_gallery_theme_tv"
+                    app:tint="@color/black" />
+                <EditText
+                    android:id="@+id/my_gallery_info_et"
+                    style="@style/MyGalleryTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:text="병현이의 미술관 입니다."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:enabled="false"
+                    app:layout_constraintBottom_toTopOf="@id/my_gallery_theme_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/my_gallery_info_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_info_tv" />
+                <TextView
+                    android:id="@+id/my_gallery_theme_tv"
+                    style="@style/MyGalleryTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="테마"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_info_et" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_gallery_theme_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_gallery_theme_tv"
+                    tools:listitem="@layout/item_my_gallery_theme" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

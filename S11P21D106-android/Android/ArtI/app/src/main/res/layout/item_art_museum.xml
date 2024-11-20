@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="6dp"
+        android:paddingEnd="12dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_art_museum"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/temp_night_star"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_gradation_art_museum"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:alpha="0.7"
+            android:scaleType="fitXY"
+            android:src="@drawable/gradation_black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_art_museum"
+            app:layout_constraintEnd_toEndOf="@id/iv_art_museum"
+            app:layout_constraintStart_toStartOf="@id/iv_art_museum" />
+
+        <TextView
+            android:id="@+id/tv_art_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/art_museum"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_art_museum"
+            app:layout_constraintStart_toStartOf="@id/iv_art_museum" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

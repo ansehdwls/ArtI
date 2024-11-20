@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.profile.MyPageFragment">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <TextView
+            android:id="@+id/my_page_profile_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter_28pt_black"
+            android:text="황병현님 어서오세요"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/my_page_profile_modify_btn"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/my_page_profile_modify_btn"
+            style="@style/MyPageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_manage_accounts_24"
+            app:layout_constraintBottom_toTopOf="@+id/my_page_pass_btn"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/my_page_profile_name_tv" />
+
+        <TextView
+            android:id="@+id/my_page_profile_modify_tv"
+            style="@style/MyPageMenuText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="프로필 편집"
+            app:layout_constraintBottom_toBottomOf="@+id/my_page_profile_modify_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_page_profile_modify_btn"
+            app:layout_constraintTop_toTopOf="@+id/my_page_profile_modify_btn" />
+
+        <ImageView
+            android:id="@+id/my_page_pass_btn"
+            style="@style/MyPageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pass_24"
+            app:layout_constraintBottom_toTopOf="@+id/my_page_info_btn"
+            app:layout_constraintEnd_toStartOf="@id/my_page_pass_tv"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/my_page_profile_modify_btn" />
+
+        <TextView
+            android:id="@+id/my_page_pass_tv"
+            style="@style/MyPageMenuText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 수정"
+            app:layout_constraintBottom_toBottomOf="@+id/my_page_pass_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_page_pass_btn"
+            app:layout_constraintTop_toTopOf="@+id/my_page_pass_btn" />
+
+        <ImageView
+            android:id="@+id/my_page_info_btn"
+            style="@style/MyPageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_outline_24"
+            app:layout_constraintBottom_toTopOf="@id/my_page_logout_btn"
+            app:layout_constraintEnd_toStartOf="@id/my_page_info_tv"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/my_page_pass_btn" />
+
+        <TextView
+            android:id="@+id/my_page_info_tv"
+            style="@style/MyPageMenuText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="이용 약관"
+            app:layout_constraintBottom_toBottomOf="@+id/my_page_info_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_page_info_btn"
+            app:layout_constraintTop_toTopOf="@+id/my_page_info_btn" />
+
+        <ImageView
+            android:id="@+id/my_page_logout_btn"
+            style="@style/MyPageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logout_24"
+            app:layout_constraintEnd_toStartOf="@id/my_page_logout_tv"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/my_page_info_btn" />
+
+        <TextView
+            android:id="@+id/my_page_logout_tv"
+            style="@style/MyPageMenuText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            app:layout_constraintBottom_toBottomOf="@+id/my_page_logout_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/my_page_logout_btn"
+            app:layout_constraintTop_toTopOf="@+id/my_page_logout_btn" />
+
+        <ImageView
+            android:id="@+id/iv_instagram"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/instagram"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/my_page_logout_btn"/>
+
+        <TextView
+            android:id="@+id/tv_instagram"
+            style="@style/MyPageMenuText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="인스타그램 연동"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_instagram"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_instagram"
+            app:layout_constraintTop_toTopOf="@+id/iv_instagram"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
