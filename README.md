@@ -185,12 +185,12 @@ Arti 앱 다운로드 링크: https://drive.google.com/file/d/1q8peKZ60zqSLBoF9x
 
 ### UI 디자인
 
-<img width="900" alt="image" src="/uploads/4437023cf46c730b991e42c17072d585/arti_피그마.png">
+<img width="900" alt="image" src="./images/arti_피그마.png">
 <br><br>
 
 ### ERD
 
-<img width="900" alt="image" src="/uploads/6673a47659901d1a58fdded46fe4cef1/erd_update.png">
+<img width="900" alt="image" src="./images/erd_update.png">
 <br><br>
 
 ## UCC 및 시연영상
@@ -206,55 +206,55 @@ Arti 앱 다운로드 링크: https://drive.google.com/file/d/1q8peKZ60zqSLBoF9x
 ### 1. 홈
 - 접속한 유저를 위한 미술관을 추천
 
-<img width="350" alt="image" src="/uploads/8c0d585d0422aa35f106f6c48087ee3a/1._홈-미술관_추천.gif">
+<img width="350" alt="image" src="./images/1._홈-미술관_추천.gif">
 <br><br><br>
 
 ### 2. 검색
 - 미술품 추천
 
-  <img width="350" alt="image" src="/uploads/6f258830e4ca48d448b7fa895f9003b5/2._미술관_추천_및_랜덤_조회_-_미술품_추천.gif">
+  <img width="350" alt="image" src="./images/2._미술관_추천_및_랜덤_조회_-_미술품_추천.gif">
 <br><br><br>
 
 - 화가 랜덤 검색
 
-  <img width="350" alt="image" src="/uploads/ec7bde9396163bdfdaef18cfce448eb4/2._미술관_추천_및_랜덤_조회_-_화가_랜덤_검색.gif">
+  <img width="350" alt="image" src="./images/2._미술관_추천_및_랜덤_조회_-_화가_랜덤_검색.gif">
   <br><br><br>
 
 - 장르 랜덤 검색
 
-  <img width="350" alt="image" src="/uploads/5bd8a2ae1e8ee4b097f222a879e15716/2._미술관_추천_및_랜덤_조회_-_장르_검색.gif">
+  <img width="350" alt="image" src="./images/2._미술관_추천_및_랜덤_조회_-_장르_검색.gif">
   <br><br><br>
 
 - 미술관 랜덤 검색
 
-  <img width="350" alt="image" src="/uploads/3f75e6645d6a41a55f70e9217ab8a887/2._미술관_추천_및_랜덤_조회_-_미술관_검색.gif">
+  <img width="350" alt="image" src="./images/2._미술관_추천_및_랜덤_조회_-_미술관_검색.gif">
   <br><br><br>
 
 ### 3. AI 이미지 생성
 - 기존의 유명한 작품의 화풍을 유저가 제공하는 이미지에 적용
 
-  <img width="350" alt="image" src="/uploads/39fc643fc09fbb97cf3d94bac97aae9d/3._AI_이미지_생성_원본.gif">
+  <img width="350" alt="image" src="./images/3._AI_이미지_생성_원본.gif">
   <br><br><br>
 
 ### 4. 미술관
 - 구독한 미술관과 내 미술관을 조회
 
-  <img width="350" alt="image" src="/uploads/a08bb4a65ab28474e0278bc5bd3b5ac1/4._미술관_페이지_구독과_내_미술관_.gif">
+  <img width="350" alt="image" src="./images/4._미술관_페이지_구독과_내_미술관_.gif">
 <br><br><br>
 
 ### 5. 미술관 상세 페이지
 - 해당 미술관에 어울리는 배경음악을 AI가 생성후, 실제 미술관에 방문한 것처럼 미술 작품들을 감상 가능.
 
-  <img width="350" alt="image" src="/uploads/4df00abeec0a3cbb4f1d1d0b696de90b/5._미술관_내부_페이지.gif">
+  <img width="350" alt="image" src="./images/5._미술관_내부_페이지.gif">
   <br><br><br>
 
 - AR 기능으로, 실제 유저가 있는 공간에 작품을 전시할 수 있음.
   
-  <img width="350" alt="image" src="/uploads/98d5c259a635c1a1bd6b2015ea347801/5._ar.gif">
+  <img width="350" alt="image" src="./images/5._ar.gif">
   <br><br><br>
 
 ### 6. 포트폴리오
 - 유저의 예술 성향을 파악할 수 있음.
 
-  <img width="350" alt="image" src="/uploads/e9bb6d39319b837a42005e56df95c59f/6._포트폴리오_원본.gif">
+  <img width="350" alt="image" src="./images/6._포트폴리오_원본.gif">
 <br><br><br>
